@@ -292,6 +292,7 @@ document.addEventListener("keydown", function (event) {
 });
 
 
+
 // ==========================================
 // 6. CONTACT FORM VALIDATION
 // ==========================================
@@ -300,36 +301,39 @@ const contactForm = document.getElementById("contact-form");
 
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
+const topicInput = document.getElementById("topic");
 const messageInput = document.getElementById("message");
 
 const formMessage = document.getElementById("form-message");
 
-
 contactForm.addEventListener("submit", function (event) {
-
     event.preventDefault();
-
 
     const name = nameInput.value.trim();
     const email = emailInput.value.trim();
+    const topic = topicInput.value;
     const message = messageInput.value.trim();
 
-
-    if (name === "" || email === "" || message === "") {
-
+    if (
+        name === "" ||
+        email === "" ||
+        topic === "" ||
+        message === ""
+    ) {
         formMessage.textContent =
             "Please fill in all fields before sending.";
-
         return;
-
     }
-
 
     formMessage.textContent =
         "Thank you! Your message has been validated successfully.";
 
-
     contactForm.reset();
-
 });
+
+// Hapus pesan validasi ketika form di-reset
+contactForm.addEventListener("reset", function () {
+    formMessage.textContent = "";
+});
+
 

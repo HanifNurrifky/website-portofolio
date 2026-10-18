@@ -6,6 +6,10 @@
 
     <meta name="description" content="Muhamad Hanif Nurrifky W - Informatics Student and Web Developer Portfolio">
 
+    <!--Meta tag untuk informasi penulis dan kata kunci halaman-->>
+    <meta name="author" content="Nurrifky Hanif">
+    <meta name="keywords" content="Nurrifky Hanif, Portfolio, Informatics, Web Development, Django, Python">
+
     <title>Muhamad Hanif Nurrifky W | IT Student</title>
 
     <!-- CSS -->
@@ -64,31 +68,35 @@
 
             <div class="hero-content">
 
-                <p class="hero-greeting">
-                    Hello, I'm
-                </p>
+                <div class="hero-text">
+                    <p class="hero-greeting">Hello, I'm</p>
 
-                <h1>
-                    Muhamad Hanif Nurrifky 
-                </h1>
+                    <h1>Muhamad Hanif Nurrifky</h1>
 
-                <h2>
-                    Informatics Student
-                </h2>
+                    <h2>Informatics Student</h2>
 
-                <p class="hero-description">
-                    I build web applications and enjoy learning about
-                    software development, web technologies, and cybersecurity.
-                </p>
+                    <p class="hero-description">
+                        I build web applications and enjoy learning about
+                        software development, web technologies, and cybersecurity.
+                    </p>
 
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">
-                        View My Projects
-                    </a>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            View My Projects
+                        </a>
 
-                    <a href="#contact" class="btn btn-secondary">
-                        Contact Me
-                    </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="hero-image">
+                    <img
+                        src="assets/PhotoProfile.jpg"
+                        alt="Muhamad Hanif Nurrifky"
+                    >
                 </div>
 
             </div>
@@ -185,6 +193,23 @@
                         </div>
 
                     </div>
+
+                </div>
+
+                                <!-- PROFILE SUMMARY IFRAME -->
+                <div class="profile-embed">
+
+                    <h3>Profile at a Glance</h3>
+
+                    <p>
+                        A short overview of my background, skills, and interests.
+                    </p>
+
+                    <iframe
+                        src="profile-summary.html"
+                        title="Profile Summary of Muhamad Hanif Nurrifky"
+                        loading="lazy">
+                    </iframe>
 
                 </div>
 
@@ -502,26 +527,67 @@
 
 
                    <article class="project-card coming-soon-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">Coming Soon</div>
-                    </div>
-
-                    <div class="project-content">
-                        <span class="project-status">Coming Soon</span>
-
-                        <h3>More Projects Coming Soon</h3>
-
-                        <p>
-                            I'm currently working on new projects to expand my portfolio
-                            and explore new technologies.
-                        </p>
-
-                        <div class="project-tech">
-                            <span>In Progress</span>
-                            <span>More To Come</span>
+                        <div class="project-image">
+                            <div class="project-placeholder">Coming Soon</div>
                         </div>
+
+                        <div class="project-content">
+                            <span class="project-status">Coming Soon</span>
+
+                            <h3>More Projects Coming Soon</h3>
+
+                            <p>
+                                I'm currently working on new projects to expand my portfolio
+                                and explore new technologies.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>In Progress</span>
+                                <span>More To Come</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                                <!-- PROJECT SUMMARY TABLE -->
+                <div class="project-summary">
+
+                    <div class="section-heading">
+                        <p class="section-label">Project Overview</p>
+                        <h2>Project Summary</h2>
                     </div>
-                </article>
+
+                    <div class="table-wrapper">
+                        <table class="project-table">
+                            <caption>Summary of My Web Development Projects</caption>
+
+                            <thead>
+                                <tr>
+                                    <th scope="col">No.</th>
+                                    <th scope="col">Project Name</th>
+                                    <th scope="col">Technologies</th>
+                                    <th scope="col">Status</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>WebKasirGR</td>
+                                    <td>Django, Python, HTML, CSS, JavaScript</td>
+                                    <td>Active Development</td>
+                                </tr>
+
+                                <tr>
+                                    <td>2</td>
+                                    <td>Finance Web</td>
+                                    <td>Django, Python, HTML, CSS, JavaScript</td>
+                                    <td>In Development</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
                 </div>
 
@@ -562,7 +628,7 @@
                                 Email
                             </h3>
 
-                            <a href="nurrifkyhanif@gmail.com">
+                            <a href="mailto:nurrifkyhanif@gmail.com">
                                 nurrifkyhanif@gmail.com
                             </a>
 
@@ -592,7 +658,7 @@
                             </h3>
 
                             <a
-                                href="#"
+                                href="https://www.instagram.com/kyky_hanif/"
                                 target="_blank"
                                 rel="noopener noreferrer">
                                 @kyky_hanif
@@ -616,7 +682,8 @@
                                 type="text"
                                 id="name"
                                 name="name"
-                                placeholder="Your name">
+                                placeholder="Your name"
+                                required>
 
                         </div>
 
@@ -631,7 +698,22 @@
                                 type="email"
                                 id="email"
                                 name="email"
-                                placeholder="your@email.com">
+                                placeholder="your@email.com"
+                                required>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="topic">Message Topic</label>
+
+                            <select id="topic" name="topic" required>
+                                <option value="">Select a topic</option>
+                                <option value="project">Project Collaboration</option>
+                                <option value="web-development">Web Development</option>
+                                <option value="question">General Question</option>
+                                <option value="other">Other</option>
+                            </select>
 
                         </div>
 
@@ -646,7 +728,8 @@
                                 id="message"
                                 name="message"
                                 rows="6"
-                                placeholder="Write your message here..."></textarea>
+                                placeholder="Write your message here..."
+                                required></textarea>
 
                         </div>
 
@@ -655,6 +738,10 @@
                             type="submit"
                             class="btn btn-primary">
                             Send Message
+                        </button>
+
+                        <button type="reset" class="btn btn-secondary">
+                            Reset Form
                         </button>
 
                         <p
@@ -679,7 +766,7 @@
         <div class="container">
 
             <p>
-                © 2026 Nurrifky Hanif. All rights reserved.
+                &copy; 2026 Muhamad Hanif Nurrifky W. All rights reserved.
             </p>
 
             <p>
