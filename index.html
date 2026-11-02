@@ -6,7 +6,7 @@
 
     <meta name="description" content="Muhamad Hanif Nurrifky W - Informatics Student and Web Developer Portfolio">
 
-    <!--Meta tag untuk informasi penulis dan kata kunci halaman-->>
+    <!-- Meta tag untuk informasi penulis dan kata kunci halaman -->
     <meta name="author" content="Nurrifky Hanif">
     <meta name="keywords" content="Nurrifky Hanif, Portfolio, Informatics, Web Development, Django, Python">
 
@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
 
     <!-- ==================== NAVBAR ==================== -->
     <header class="header">
@@ -37,6 +38,10 @@
 
                 <li>
                     <a href="#about" class="nav-link">About</a>
+                </li>
+
+                <li>
+                    <a href="#experience" class="nav-link">Journey</a>
                 </li>
 
                 <li>
@@ -73,7 +78,7 @@
 
                     <h1>Muhamad Hanif Nurrifky</h1>
 
-                    <h2>Informatics Student</h2>
+                    <h2><span id="typing-text">Informatics Student</span><span class="typing-cursor" aria-hidden="true">|</span></h2>
 
                     <p class="hero-description">
                         I build web applications and enjoy learning about
@@ -215,6 +220,74 @@
 
             </div>
 
+        </section>
+
+
+        <!-- ==================== EXPERIENCE & LEARNING JOURNEY ==================== -->
+        <section id="experience" class="experience section">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="section-label">My Development Path</p>
+                    <h2>Experience & Learning Journey</h2>
+                    <p>
+                        A look at how I build my foundation through coursework,
+                        personal projects, and continuous learning.
+                    </p>
+                </div>
+
+                <div class="timeline">
+                    <article class="timeline-item reveal">
+                        <span class="timeline-marker"></span>
+                        <div class="timeline-card">
+                            <span class="timeline-tag">Academic Foundation</span>
+                            <h3>Informatics Studies</h3>
+                            <p>
+                                Building foundations in programming, algorithms,
+                                databases, software engineering, and computer systems
+                                through university coursework.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item reveal">
+                        <span class="timeline-marker"></span>
+                        <div class="timeline-card">
+                            <span class="timeline-tag">Web Development Project</span>
+                            <h3>WebKasirGR</h3>
+                            <p>
+                                Developing a Django-based cashier application with
+                                merchant access, menu management, customer orders,
+                                and order queues.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item reveal">
+                        <span class="timeline-marker"></span>
+                        <div class="timeline-card">
+                            <span class="timeline-tag">Personal Project</span>
+                            <h3>Finance Web</h3>
+                            <p>
+                                Exploring how a web application can help users record
+                                income and expenses, while practicing backend and
+                                frontend integration.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item reveal">
+                        <span class="timeline-marker"></span>
+                        <div class="timeline-card">
+                            <span class="timeline-tag">Currently Exploring</span>
+                            <h3>Web Development & Cybersecurity</h3>
+                            <p>
+                                Strengthening my web development skills while
+                                learning networking and cybersecurity fundamentals.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </section>
 
 
@@ -759,6 +832,10 @@
 
     </main>
 
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+        ↑
+    </button>
 
     <!-- ==================== FOOTER ==================== -->
     <footer class="footer">
